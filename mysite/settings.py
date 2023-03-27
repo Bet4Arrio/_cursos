@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'user',
+
     'page',
     'courses',
 
@@ -58,6 +60,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+
+AUTHENTICATION_BACKENDS = [
+    'user.authentication.CPFAuthenticationBackend',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -102,13 +109,13 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'dd8mavr6ngslof',
+        'NAME': DATABASE_NAME,
 
-        'USER': 'rhulnwwjhgqvca',
+        'USER': DATABASE_USER,
 
-        'PASSWORD': 'd3579601c917b62dd21ffabbe703c357fd1d12998bd2008b6ef1c48a58b9fd79',
+        'PASSWORD': DATABASE_PASSWORD,
 
-        'HOST': 'ec2-18-214-140-149.compute-1.amazonaws.com',
+        'HOST': DATABASE_HOST,
 
         'PORT': '5432',
 
@@ -141,7 +148,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Kuala_Lumpur'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -162,6 +169,7 @@ STATICFILES_DIRS = [
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
+AUTH_USER_MODEL = 'user.User'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
