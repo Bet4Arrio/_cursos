@@ -40,10 +40,10 @@
 
                     <!--<li><a href="{%url 'home'%}" class="nav-link px-2 text-secondary">Home</a></li>-->
                     <li><a href="{%url 'home'%}" class="nav-link px-2 text-white">Home</a></li>
-                    <li><a href="{%url 'updates'%}" class="nav-link px-2 text-white">Updates</a></li>
-                    <li><a href="{%url 'courses'%}" class="nav-link px-2 text-white">Courses</a></li>
+                    <li><a href="{%url 'updates'%}" class="nav-link px-2 text-white">Novidades</a></li>
+                    <li><a href="{%url 'courses'%}" class="nav-link px-2 text-white">Cursos</a></li>
                     {% if request.user.is_staff %}
-                    <li><a href="{%url 'courses'%}" class="nav-link px-2 text-white">Students</a></li>
+                    <li><a href="{%url 'courses'%}" class="nav-link px-2 text-white">Estudantes</a></li>
                     {% endif %}
                 </ul>
 

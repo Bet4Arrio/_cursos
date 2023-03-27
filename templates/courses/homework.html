@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="my-3 p-3 bg-body rounded shadow-sm">
-            <h6 class="border-bottom pb-2 mb-0">Homework</h6>
+            <h6 class="border-bottom pb-2 mb-0">Trabalhos</h6>
             {% if homework_list %}
             {% for homework in homework_list %}
             <div class="d-flex text-muted pt-3">
@@ -66,7 +66,7 @@
             {% endfor %}
             {% else %}
             <div class="d-flex text-muted pt-3">
-                <p>No homework are available.</p>
+                <p>Nenhum trabalho disponivel ainda</p>
             </div>
             {% endif %}
             {% if user.is_staff %}
